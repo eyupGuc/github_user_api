@@ -15,8 +15,8 @@ const updateDOM = (users) => {
   //   userDiv.innerHTML = `<img width="200px" src="${users[0].avatar_url} "> <h1> ${users[0].login}
   //   `;
   users.forEach((user) => {
-    const { login, avatar_url: avatar, html_url, site_admin } = user;
-    userDiv.innerHTML += `<div><img src="${avatar}" width="300px" /> <h2> name:${login}</h2>  <a href="${html_url} ">${html_url} </a> </div> `;
+    const { login, avatar_url: avatar, html_url } = user;
+    userDiv.innerHTML += `<div class="col-lg-4 my-3"><img src="${avatar}" width="300px" /> <h2> name:${login}</h2>  <a href="${html_url} ">${html_url} </a> </div> `;
   });
 };
 
