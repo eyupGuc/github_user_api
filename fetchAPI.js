@@ -8,6 +8,10 @@ fetch("https://api.github.com/users")
     return res.json();
   })
   .then((data) => updateDOM(data))
-  .catch(err);
+  .catch((hata) => console.log(hata));
 
-console.log(userData);
+const updateDOM = (data) => {
+  console.log(data);
+};
+
+const userDiv = document.querySelector(".users");
